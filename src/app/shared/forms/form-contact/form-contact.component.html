@@ -1,0 +1,58 @@
+<form [formGroup]="messageForm" (ngSubmit)="onSubmit()">
+  <div class="field">
+    <label class="label">Name</label>
+    <div class="control has-icons-left has-icons-right">
+      <input formControlName="name"
+             class="input"
+             [ngClass]="{
+               'is-danger': submitted && f.name.errors,
+               'is-success': submitted && !f.name.errors
+             }"
+             type="text"
+             placeholder="Text input">
+      <span class="icon is-small is-left">
+        <fa-icon [icon]="faUser"></fa-icon>
+      </span>
+      <span class="icon is-small is-right">
+        <fa-icon [icon]="faCheck"></fa-icon>
+      </span>
+    </div>
+    <div *ngIf="submitted && f.name" class="help is-danger">
+      <div *ngIf="f.name.errors.invalid && f.name.errors.required">Name is required</div>
+      <div *ngIf="f.name.errors.invalid && f.name.errors.minlength">Name is too short</div>
+      <div *ngIf="f.name.errors.invalid && f.name.errors.maxlength">Name is too long</div>
+    </div>
+    <pre>{{f.name.errors | json}}</pre>
+  </div>
+
+  <div class="field">
+    <label class="label">Email</label>
+    <div class="control has-icons-left has-icons-right">
+      <input class="input is-danger" type="email" placeholder="Email input" formControlName="email" required email>
+      <span class="icon is-small is-left">
+        <fa-icon [icon]="faEnvelope"></fa-icon>
+      </span>
+      <span class="icon is-small is-right">
+        <fa-icon [icon]="faExclamationTriangle"></fa-icon>
+      </span>
+    </div>
+    <p class="help is-danger">This email is invalid</p>
+  </div>
+
+  <div class="field">
+    <label class="label">Message</label>
+    <div class="control">
+      <textarea class="textarea" placeholder="Textarea" formControlName="message" required minlength="50"></textarea>
+    </div>
+  </div>
+
+  <div class="field is-grouped">
+    <div class="control">
+      <!--<button class="button is-link" [disabled]="!messageForm.valid">Submit</button>-->
+      <button class="button is-link">Submit</button>
+    </div>
+    <div class="control">
+      <button class="button is-link is-light" [disabled]="messageForm.pristine" (click)="onReset()">Cancel</button>
+    </div>
+  </div>
+</form>

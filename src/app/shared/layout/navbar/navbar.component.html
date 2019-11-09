@@ -1,0 +1,57 @@
+<nav id="outranceNavbar" class="navbar is-black is-fixed-top" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a class="navbar-item" routerLink="/" routerLinkActive="active">
+        <img src="../../../../assets/img/logo-outrance-larger.webp">
+      </a>
+
+      <a role="button" #navBurger (click)="toggleBurger($event)"
+         [class.is-active]="isBurgerActive"
+         class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div #navMenu class="navbar-menu has-background-black"
+         [class.is-active]="isBurgerActive">
+      <div class="navbar-start">
+        <a class="navbar-item" routerLink="/event-fourth" routerLinkActive="is-active">
+          {{ 'L\'Événement' | uppercase }}
+        </a>
+
+        <a class="navbar-item" routerLink="/organizing-team" routerLinkActive="is-active">
+          {{ 'Le Comité d\'Organisation' | uppercase }}
+        </a>
+
+        <a class="navbar-item" routerLink="/partners" routerLinkActive="is-active">
+          {{ 'Les Partenaires' | uppercase }}
+        </a>
+      </div>
+
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a class="button is-white is-outlined is-large"
+               href="https://www.facebook.com/OutranceParty/"
+               target="_blank"
+               rel="noopener noreferrer">
+              <span class="icon is-large" style="font-size: 2rem;">
+                <fa-icon [icon]="faFacebookF" fixedWidth></fa-icon>
+              </span>
+            </a>
+            <a class="button is-white is-outlined is-large"
+               href="https://soundcloud.com/outrancelyon/"
+               target="_blank"
+               rel="noopener noreferrer">
+              <span class="icon is-small" style="font-size: 2rem;">
+                <fa-icon [icon]="faSoundcloud" fixedWidth></fa-icon>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
