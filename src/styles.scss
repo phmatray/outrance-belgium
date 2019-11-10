@@ -91,7 +91,6 @@ $variable-columns: true;
 $primary: $purple;
 $link: $purple;
 $fullhd-enabled: false;
-$background: $black;
 $button-family: "Oswald", sans-serif;
 $subtitle-family: "Oswald", sans-serif;
 
@@ -105,7 +104,7 @@ $navbar-item-active-color: $purple;
 $navbar-item-active-background-color: $black;
 $navbar-burger-color: $white;
 $navbar-height: 6.66rem;
-$footer-background-color: $black;
+$footer-background-color: #00000000;
 $footer-color: $grey-light;
 
 // Import only what you need from Bulma

@@ -16,7 +16,6 @@ import { PhotoGridComponent } from './shared/sections/photo-grid/photo-grid.comp
 import { HeaderVideoComponent } from './shared/layout/header-video/header-video.component';
 import { BiographyComponent } from './shared/sections/biography/biography.component';
 import { HeroDownloadComponent } from './shared/sections/hero-download/hero-download.component';
-import { ParticlesComponent } from './shared/layout/particles/particles.component';
 import { HeroTicketingComponent } from './shared/sections/hero-ticketing/hero-ticketing.component';
 import { EventFourthComponent } from './shared/sections/event-fourth/event-fourth.component';
 import { EventFourthPageComponent } from './pages/event-fourth/event-fourth-page.component';
@@ -39,8 +38,6 @@ import { TeamMemberComponent } from './shared/components/team-member/team-member
     HeaderVideoComponent,
     BiographyComponent,
     HeroDownloadComponent,
-    ParticlesComponent,
-    ParticlesComponent,
     HeroTicketingComponent,
     EventFourthComponent,
     EventFourthPageComponent,

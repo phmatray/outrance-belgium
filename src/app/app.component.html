@@ -1,9 +1,11 @@
-<app-particles></app-particles>
+<app-header-video></app-header-video>
 <app-navbar></app-navbar>
 
 <div class="has-background-black">
-  <router-outlet></router-outlet>
-  <app-footer></app-footer>
+  <div class="container" style="z-index: 2;">
+    <router-outlet></router-outlet>
+    <app-footer></app-footer>
+  </div>
 </div>
 
 
