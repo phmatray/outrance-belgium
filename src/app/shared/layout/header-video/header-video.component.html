@@ -1,6 +1,6 @@
 <section class="hero" style="max-height: 384px; overflow: hidden; display: flex; align-items: center; justify-content: center">
-  <video autoplay muted loop id="myVideo" style="width: 100%; z-index: 0;">
-    <source src="http://video2.ignitemotion.com/files/mp4/spin_cycle.mp4" type="video/mp4">
+  <video loop muted autoplay oncanplay="this.play()" onloadedmetadata="this.muted = true" style="width: 100%; z-index: 0;">
+    <source type="video/mp4" src="http://video2.ignitemotion.com/files/mp4/spin_cycle.mp4">
     Your browser does not support HTML5 video.
   </video>
 
