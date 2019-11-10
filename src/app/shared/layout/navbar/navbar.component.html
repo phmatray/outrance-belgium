@@ -1,4 +1,4 @@
-<nav id="outranceNavbar" class="navbar is-black is-fixed-top" role="navigation" aria-label="main navigation">
+<nav id="outranceNavbar" class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
   <div class="container">
     <div class="navbar-brand">
       <a class="navbar-item" routerLink="/" routerLinkActive="active">
@@ -7,25 +7,28 @@
 
       <a role="button" #navBurger (click)="toggleBurger($event)"
          [class.is-active]="isBurgerActive"
-         class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+         class="navbar-burger burger"
+         aria-label="menu"
+         aria-expanded="false"
+         data-target="navbarBasicExample">
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
       </a>
     </div>
 
-    <div #navMenu class="navbar-menu has-background-black"
+    <div id="navMenu" #navMenu class="navbar-menu has-background-black"
          [class.is-active]="isBurgerActive">
       <div class="navbar-start">
-        <a class="navbar-item" routerLink="/event" routerLinkActive="is-active">
+        <a class="navbar-item" routerLink="event" routerLinkActive="is-active">
           {{ 'L\'Événement' | uppercase }}
         </a>
 
-        <a class="navbar-item" routerLink="/organizing-team" routerLinkActive="is-active">
+        <a class="navbar-item" routerLink="organizing-team" routerLinkActive="is-active">
           {{ 'Le Comité d\'Organisation' | uppercase }}
         </a>
 
-        <a class="navbar-item" routerLink="/partners" routerLinkActive="is-active">
+        <a class="navbar-item" routerLink="partners" routerLinkActive="is-active">
           {{ 'Les Partenaires' | uppercase }}
         </a>
       </div>
@@ -33,7 +36,7 @@
       <div class="navbar-end">
         <div class="navbar-item">
           <div class="buttons">
-            <a class="button is-white is-outlined is-large"
+            <a class="button is-white is-outlined is-medium"
                href="https://www.facebook.com/OutranceParty/"
                target="_blank"
                rel="noopener noreferrer">
@@ -41,7 +44,7 @@
                 <fa-icon [icon]="faFacebookF" fixedWidth></fa-icon>
               </span>
             </a>
-            <a class="button is-white is-outlined is-large"
+            <a class="button is-white is-outlined is-medium"
                href="https://soundcloud.com/outrancelyon/"
                target="_blank"
                rel="noopener noreferrer">
