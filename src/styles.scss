@@ -109,3 +109,8 @@ $footer-color: $grey-light;
 
 // Import only what you need from Bulma
 @import "../node_modules/bulma/bulma.sass";
+
+// html style
+html {
+  background-color: $black;
+}
