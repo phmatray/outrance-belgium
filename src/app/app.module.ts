@@ -23,6 +23,7 @@ import { NotFoundPageComponent } from './pages/not-found/not-found-page.componen
 import { OrganizingTeamPageComponent } from './pages/organizing-team/organizing-team-page.component';
 import { PartnersPageComponent } from './pages/partners/partners-page.component';
 import { TeamMemberComponent } from './shared/components/team-member/team-member.component';
+import { Video16by9Component } from './shared/elements/video16by9/video16by9.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { TeamMemberComponent } from './shared/components/team-member/team-member
     OrganizingTeamPageComponent,
     PartnersPageComponent,
     TeamMemberComponent,
+    Video16by9Component,
   ],
   imports: [
     BrowserModule,
